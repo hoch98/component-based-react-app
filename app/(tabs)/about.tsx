@@ -1,23 +1,30 @@
-import { Layout } from "@ui-kitten/components";
-import { StyleSheet } from 'react-native';
-import TextComponent from "../components/Tabs";
+import { Container } from "@mui/material";
+import TextComponent from "../components/TextComponent";
 
-const styles = StyleSheet.create({
-  layout: {
-    padding: 15,
-    flex: 1,
-    alignItems: 'center',
+
+const styles = {
+  container: {
+    padding: 2,
   },
   text: {
-    fontFamily: "impact"
+    textAlign: "center",
+    display: "block",
+    width: "100%",
+    fontSize: 30
   }
-});
+}
 
-export default function HomeScreen() {
+export default function About() {
+  var content = [
+    <TextComponent type="p" text="About" sx={styles.text}/>,
+  ]
+
   return (
-    <Layout style={styles.layout}>
-      <TextComponent type="p" text='About'/>
-    </Layout>
+    <Container sx={styles.container}>
+      {content.map((child:any) => {
+        return child
+      })}
+    </Container>
   );
 }
 
