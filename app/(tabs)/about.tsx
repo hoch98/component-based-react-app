@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontSize: 30
+    fontFamily: "impact"
   }
 });
 
 export default function HomeScreen() {
   return (
     <Layout style={styles.layout}>
-      <TextComponent type="p" text="hi" style={styles.text}/>
+      <TextComponent type="p" text='About'/>
     </Layout>
   );
 }
