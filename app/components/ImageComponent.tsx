@@ -10,7 +10,8 @@ function ImageComponent(props: Optional<props, 'sx'>) {
   return (
     <Box component="img" sx={{
         display: "block",
-        maxWidth: "100%",
+        width: "100%",
+        maxWidth: "500px",
         height: "auto",
         objectFit: "contain", 
         ...props.sx,

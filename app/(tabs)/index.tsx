@@ -1,4 +1,5 @@
 import { Container } from "@mui/material";
+import { ScrollView } from "react-native";
 import GridComponent from "../components/GridComponent";
 import ImageComponent from "../components/ImageComponent";
 import TextComponent from "../components/TextComponent";
@@ -26,17 +27,19 @@ export default function HomeScreen() {
       <TextComponent type="p" text="grid element 2"/>,
       <GridComponent children={[
         <ImageComponent url={url}/>,
-        <TextComponent type="p" text="Fukakouryoku by Vaundy" sx={{fontSize: "30px"}}/>,
+        <TextComponent type="p" text="dskjffd" sx={{fontSize: "30px"}}/>,
       ]} itemSize={6}/>
-    ]} itemSize={4} columnSpacing={0}/>
+    ]} itemSize={4} columnSpacing={0}/>,
   ]
 
   return (
-    <Container sx={styles.container}>
-      {content.map((child:any) => {
-        return child
-      })}
-    </Container>
+    <ScrollView>
+      <Container sx={styles.container}>
+        {content.map((child:any) => {
+          return child
+        })}
+      </Container>
+    </ScrollView>
   );
 }
 

@@ -1,4 +1,5 @@
 import { Container } from "@mui/material";
+import { ScrollView } from "react-native";
 import TextComponent from "../components/TextComponent";
 
 
@@ -20,11 +21,13 @@ export default function About() {
   ]
 
   return (
-    <Container sx={styles.container}>
-      {content.map((child:any) => {
-        return child
-      })}
-    </Container>
+    <ScrollView>
+      <Container sx={styles.container}>
+        {content.map((child:any) => {
+          return child
+        })}
+      </Container>
+    </ScrollView>
   );
 }
 
