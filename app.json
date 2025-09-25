@@ -41,6 +41,7 @@
       ]
     ],
     "experiments": {
+      "baseUrl": "/component-based-react-app",
       "typedRoutes": true,
       "reactCompiler": true
     }
