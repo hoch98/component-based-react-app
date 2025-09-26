@@ -5,6 +5,7 @@ import { Optional } from "utility-types";
 type props = {
   type: any;
   text: string;
+  alignment: string;
   sx?: any;
   onSelect?: () => void; 
 };
@@ -15,6 +16,7 @@ function TextComponent(props: Optional<props, "sx">) {
       sx={{
         marginTop: "2%",
         marginBottom: "2%",
+        textAlign: props.alignment,
         ...props.sx
       }}
       variant={props.type}

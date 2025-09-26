@@ -4,16 +4,15 @@ import React from 'react';
 
 type props = {
   addComponent: Function
+  gridIndex: number
 }
 
 const options = [
   "Text",
-  "Image", 
-  "Grid"
+  "Image",
 ];
 
-
-function AddComponent(props: props) {
+function AddGridComponent(props: props) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,7 +23,7 @@ function AddComponent(props: props) {
     index: number,
   ) => {
     var option = options[index]
-    props.addComponent(option)
+    props.addComponent(option, props.gridIndex)
     setAnchorEl(null);
   };
   const handleClose = () => {
@@ -68,4 +67,4 @@ function AddComponent(props: props) {
   )
 }
 
-export default AddComponent
+export default AddGridComponent

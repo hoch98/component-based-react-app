@@ -4,11 +4,12 @@ import { Optional } from "utility-types";
 type props = {
   url: string;
   sx?: any;
+  alignment: string;
   onSelect?: () => void;
 };
 
 function ImageComponent(props: Optional<props, "sx">) {
-  const alignment = props.sx?.alignment || "left";
+  const alignment = props.alignment || "left";
 
   // Map alignment -> flexbox
   const justifyMap: Record<string, string> = {
